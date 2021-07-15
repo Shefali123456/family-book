@@ -1,0 +1,44 @@
+<html>
+<head>
+    <title>Family Book</title>
+</head>
+<body>
+    <center>
+<h1>Family Book</h1>
+
+<div> <img src="https://upload.wikimedia.org/wikipedia/commons/d/df/Family_Portrait.jpg" 
+style="width: 40%;" id="family_images"> </div>
+
+<h3 id="family_names"></h3>
+
+<button onclick="update();">Next</button>
+</center>
+<script>
+var images=
+["https://upload.wikimedia.org/wikipedia/commons/d/df/Family_Portrait.jpg", "https://www.irobot.com/-/media/images/features/product-hero-images/careers/careersite_globalsupply_rectangle-12.ashx?h=662&amp;iar=0&amp;mw=1400&amp;w=1400&amp;hash=927F9166E49E3E93B8272D5C86CD0086", "https://lh3.googleusercontent.com/proxy/q7jrEsR0oKYbh-RVTVJ6GEjxV96f4vRVBxjUC3gtRBLGDPTzQdN3ojLJMra5yf5b7FUy0Nn4XnOa-8-dDHs_ZbY9gxUlbVGWh7fcpJ99yrXZ8wxSfd_UohvX8Ei1_q4NVUePk3DmJWTFF8QBFmsGzY3dsL1ZVRnSy24",
+"https://www.cleveland.com/resizer/wUC5K0u_4Yg3SUwu-ixnGjDV3-4=/1280x0/smart/advancelocal-adapter-image-uploads.s3.amazonaws.com/image.cleveland.com/home/cleve-media/width2048/img/sunpress/photo/laurel-school-380af5bbec2cc12b.jpg",
+"https://s.clipartkey.com/mpngs/s/4-47912_girl-clipart-free-images-young-girl-clipart.png"];
+
+var names = ["Family Book", "Sushmita Bawari", "Vardhaman Bawari", "Saumya Bawari", "Shefali Bawari"];
+
+var i= 0;
+function update()
+{
+    i++;
+    var family_number=4
+    if(i> family_number)
+  {
+      i=0;
+  }
+  var updatedImage= images[i];
+  var updatedName= names[i];
+  document.getElementById("family_images").src=updatedImage;
+  document.getElementById("family_names").innerHTML=updatedName;
+}
+
+
+</script>
+
+
+</body>
+</html>
